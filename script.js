@@ -24,6 +24,16 @@ const images = [
     currentImage = (currentImage + 1) % images.length;
     updateImage();
   });
+
+  leftArrow.addEventListener("touchstart", () => {
+  currentImage = (currentImage - 1 + images.length) % images.length;
+  updateImage();
+});
+
+rightArrow.addEventListener("touchstart", () => {
+  currentImage = (currentImage + 1) % images.length;
+  updateImage();
+});
   
   updateImage();
 
